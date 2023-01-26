@@ -1,206 +1,130 @@
 <script>
-// @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'HomeView',
-  // components: {
-  //   HelloWorld
-  // }
+  // components: { HelloWorld },
+  data(){
+    return{
+      mv:"works",
+    }
+  },
+  mounted(){
+    console.log('home mounted')
+  },
+  methods:{
+    navSwitch(e){
+      if(e==1){
+        this.mv="works"
+      }else if(e==2){
+        this.mv="git"
+      }
+    }
+  },
 }
 </script>
-
 <template>
-<div class="cont">
-  <div class="main">
-    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <div id="left_box">
-      <div class="left_fill">
-        <div class="left_fill_inside"></div>
+  <div class="bg">
+    <div class="cont">
+      <!-- 全画面表示 アクセス時アニメーション ----------------------------------------------->
+      <div class="intro">
+        masashi yasaka
+      </div>
+      <!-- 全画面表示 アクセス時アニメーション ----------------------------------------------->
+      <div class="header">
+        <h1>yskms</h1>
+        <nav>
+          <p @click="navSwitch(1)">works</p>
+          <p @click="navSwitch(2)">git</p>
+        </nav>
+      </div>
+      <div class="main">
+        <div class="works_cont" v-if="mv=='works'">
+          <div>works</div>
+          <div>works</div>
+          <div>works</div>
+        </div>
+        <div class="git_cont" v-else-if="mv=='git'">
+          <p>git</p>
+          <a href="https://github.com/yskms">https://github.com/yskms</a>
+        </div>
       </div>
     </div>
-    <!--left_box-->
-
-    <div class="list">
-      <div class="list_main">
-        <h2>portfolio</h2>
-      </div>
-    </div>
-
-    <div class="logo">
-      <div class="logo_main"></div>
-    </div>
-
-    <div id="right_box">
-      <div class="right_fill">
-        <div class="right_fill_inside"></div>
-      </div>
-    </div>
-    <!--right_box-->
-  </div>
   </div>
 </template>
 
 <style scoped>
+.bg{
+  background-color: blueviolet;
+  width: 100vw;
+  height: 100vh;
+}
 .cont{
-  background-color: grey;
-}
-.main{
-  background-color: black;
-  display: grid;
-  max-width: 1200px;
-  grid-template-columns: 1fr 5fr 5fr 1fr;
-}
-.list{
-  width: 400px;
-  background-color: yellowgreen
-}
-.list_main{
-  width: 80%;
+  max-width: 375px;
   margin: 0 auto;
-  background-color: black;
-}
-.logo{
-  position: relative;
-}
-@keyframes border-animation {
-  to { transform: rotate(360deg); }
-}
-.logo_main{
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* border-radius: 50%; */
-  border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
-  animation: border-animation 50s infinite linear;
-
-
-
-  --c1: red;
-  --c2: orange;
-  --c3: yellow;
-  --c4: green;
-  --c5: blue;
-  --c6: indigo;
-  --c7: violet;
-  
-  --solid: var(--c1), var(--c2), var(--c3), var(--c4), var(--c5), var(--c6), var(--c7);
-  --solid-wrap: var(--solid), var(--c1);
-  --trans: 
-    var(--c1), transparent,
-    var(--c2), transparent,
-    var(--c3), transparent,
-    var(--c4), transparent,
-    var(--c5), transparent,
-    var(--c6), transparent,
-    var(--c7)
-  ;
-  --trans-wrap: var(--trans), transparent, var(--c1);
-  
-  background: 
-    radial-gradient(circle, var(--trans)),
-    conic-gradient(from 180deg, var(--trans-wrap)),
-    radial-gradient(circle, var(--trans)),
-    conic-gradient(var(--solid-wrap));
-  background-blend-mode: overlay;
-  height: 500px;
-  width: 450px;
-}
-
-
-
-#left_box {
-  position: relative; /* ::beforeで作るレイヤーの基準点 */
-  width: 50px;/* 画面の横幅いっぱい */
   height: 100vh;
-  overflow: hidden;
-  margin: 5%;
-}
-
-/* ブロックの下にレイヤーを追加して背景にストライプを描く */
-#left_box::after {
-  content: "";/* 空の入れ物（レイヤー）を作る */
-  display: block;
-  width: 50px;/* 画面の横幅いっぱい */
-  height: 70vh;  /* 画面の高さいっぱい */
-  position: absolute; /* 強制的に親のtop:0, left:0;にポジション */
-  /* z-index: -1;レイヤーの下に */
-  background-color: yellow;
-  /* background: repeating-linear-gradient(135deg,#f6578f 0,#f6578f 4px,#fbaac7 4px,#fbaac7 8px); */
-  transform: skewY(329deg); /* レイヤーを台形に変形 */
-  transform-origin: bottom right;/* 台形に変形する際の基準点 */
-}
-.left_fill{
-  width: 25px;
-  height: 60vh;
-  /* background-color: black; */
-  position: absolute;
-  top: 17vh;
-  right: 0;
-}
-.left_fill_inside{
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  gap: 2rem;
+  /* mix-blend-mode: color-burn; */
   position: relative;
 }
-.left_fill_inside::after {
-  content: "";/* 空の入れ物（レイヤー）を作る */
-  display: block;
-  width: 50px;/* 画面の横幅いっぱい */
-  height: 40vh;  /* 画面の高さいっぱい */
-  position: absolute; /* 強制的に親のtop:0, left:0;にポジション */
-  z-index: 1;
-  background-color: black;
-  /* background: repeating-linear-gradient(135deg,#f6578f 0,#f6578f 4px,#fbaac7 4px,#fbaac7 8px); */
-  transform: skewY(329deg); /* レイヤーを台形に変形 */
-  transform-origin: bottom right;/* 台形に変形する際の基準点 */
-}
-
-
-
-#right_box {
-  position: relative; /* ::beforeで作るレイヤーの基準点 */
-  width: 50px;/* 画面の横幅いっぱい */
-  height: 100vh;
-  overflow: hidden;
-  margin: 5%;
-}
-
-/* ブロックの下にレイヤーを追加して背景にストライプを描く */
-#right_box::after {
-  content: "";/* 空の入れ物（レイヤー）を作る */
-  display: block;
-  width: 50px;/* 画面の横幅いっぱい */
-  height: 73vh;  /* 画面の高さいっぱい */
-  position: absolute; /* 強制的に親のtop:0, left:0;にポジション */
-  /* z-index: -1;レイヤーの下に */
-  background-color: yellow;
-  /* background: repeating-linear-gradient(135deg,#f6578f 0,#f6578f 4px,#fbaac7 4px,#fbaac7 8px); */
-  transform: skewY(329deg); /* レイヤーを台形に変形 */
-  transform-origin: top left;/* 台形に変形する際の基準点 */
-}
-.right_fill{
-  width: 25px;
-  height: 60vh;
-  /* background-color: black; */
+/* アクセス時アニメーション --------------------------------------------*/
+.intro{
   position: absolute;
-  top: 0vh;
-  left: 0;
-  overflow: hidden;
+  top: 45%;
+  width: 100%;
+  color: #ffffff;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 30px;
+  animation-name:introAnime;
+  animation-duration:3s;
+  animation-fill-mode: forwards;
+  opacity:0;
+  text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.2);
 }
-.right_fill_inside{
-  position: relative;
-  /* width: 100%; */
+@keyframes introAnime{
+  0% {opacity: 0;}
+  20% {opacity: 1;transform: translateX(0);}
+  50% {opacity: 0.9;transform: translateX(0);}
+  80% {opacity: 0;transform: translateX(0);}
 }
-.right_fill_inside::after {
-  content: "";/* 空の入れ物（レイヤー）を作る */
-  display: block;
-  width: 5vw;/* 画面の横幅いっぱい */
-  height: 40vh;  /* 画面の高さいっぱい */
-  position: absolute; /* 強制的に親のtop:0, left:0;にポジション */
-  z-index: 1;
-  background-color: black;
-  /* background: repeating-linear-gradient(135deg,#f6578f 0,#f6578f 4px,#fbaac7 4px,#fbaac7 8px); */
-  transform: skewY(329deg); /* レイヤーを台形に変形 */
-  transform-origin: top left;/* 台形に変形する際の基準点 */
+.header{
+  animation-name:headerAnime;
+  animation-duration:6s;
+  animation-fill-mode: forwards;
+  opacity:0;
+  color: #ffffff;
+  width: 100%;
+}
+@keyframes headerAnime{
+  0% {opacity: 0;  }
+  35% {opacity: 0;transform: translateX(0);}
+  55% {opacity: 1;transform: translateX(0);}
+  100% {opacity: 1;transform: translateX(0);}
+}
+/* アクセス時アニメーション ここまで--------------------------------------------*/
+.header h1{
+  text-align: left;
+}
+.header nav{
+  display: flex;
+  justify-content: space-around;
+}
+/* ------------------------ */
+.main{
+  animation-name:headerAnime;
+  animation-duration:6s;
+  animation-fill-mode: forwards;
+  opacity:0;
+  color: #ffffff;
+}
+.works_cont{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
 }
 </style>
