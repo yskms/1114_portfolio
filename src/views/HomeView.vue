@@ -197,6 +197,7 @@ export default {
 }
 .works_main_left img{
   height: 100%;
+  width: 100%;
 }
 .works_main_right{
   display: flex;
