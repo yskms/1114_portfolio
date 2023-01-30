@@ -72,7 +72,7 @@ export default {
         </div>
 
         <div class="git_cont" v-else-if="mv==false">
-          <p @click="moveLink('https://github.com/yskms')">https://github.com/yskms</p>
+          <a @click="moveLink('https://github.com/yskms')">https://github.com/yskms</a>
           <!-- <a href="https://github.com/yskms">https://github.com/yskms</a> -->
         </div>
 
@@ -194,5 +194,9 @@ export default {
 
 .git_cont{
   cursor: pointer;
+  transition: 0.5s;
+}
+.git_cont:hover{
+  transform: scale(1.1);
 }
 </style>

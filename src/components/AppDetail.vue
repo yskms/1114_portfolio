@@ -123,6 +123,7 @@ export default {
   /* max-width: 100%; */
   width: 100%;
   border-radius: 5px 5px 0 0;
+  object-fit: cover;
 
 }
 /* ------------- */
@@ -207,6 +208,10 @@ export default {
 }
   .close_area svg{
     cursor: pointer;
+    transition: 0.5s;
+  }
+  .close_area svg:hover{
+    transform: scale(1.2);
   }
 /* ------------- */
 </style>
