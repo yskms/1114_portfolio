@@ -28,10 +28,7 @@ export default {
     },
     closeAppDetail(){
       this.isAppDetail=false
-    },
-    moveLink(url) {
-      window.open(url, '_blank')
-    },
+    }
   },
 }
 </script>
@@ -60,22 +57,63 @@ export default {
       </div>
       <div class="main">
         <div class="works_cont" v-if="mv==true">
-          <div class="works_icon">
-              <img @click="openAppDetail(0)" src="../assets/hakase.png" alt="">
+          <div class="works_main">
+            <div class="works_main_left">
+              <img src="../assets/hakase.png" alt="">
+            </div>
+            <div class="works_main_right">
+              <p>
+                <a @click="openAppDetail(0)">プレゼン資料 : </a>
+                <a href="https://pitchdeck.hypermatic.com/slides/l9rx5yyj40410?token=VjR4biQlU2lIYmhIelo%3D">pitchdeck</a>
+              </p>
+              <p>
+                <a>Netlify : </a>
+                <a href="https://remarkable-salmiakki-887cba.netlify.app/">app</a>
+              </p>
+              <p>
+                <a>Github : </a>
+                <a href="https://github.com/yskms/1023_flag_app_v2">URL</a>
+              </p>
+            </div>
           </div>
-          <div class="works_icon">
-              <img @click="openAppDetail(1)" src="../assets/rikare.svg" alt="">
+          <div class="works_main">
+            <div class="works_main_left">
+              <img src="../assets/rikare.svg" alt="">
+            </div>
+            <div class="works_main_right">
+              <p>
+                <a>Netlify : </a>
+                <a href="https://deft-toffee-382a3f.netlify.app/">app</a>
+              </p>
+              <p>
+                <a>Github : </a>
+                <a href="https://github.com/yskms/1117_rikameshi.git">URL</a>
+              </p>
+            </div>
           </div>
-          <div class="works_icon">
-              <img @click="openAppDetail(2)" src="../assets/utc.svg" alt="">
+          <div class="works_main">
+            <div class="works_main_left">
+              <img src="../assets/utc.svg" alt="">
+            </div>
+            <div class="works_main_right">
+              <p>
+                <a>Netlify : </a>
+                <a href="https://chic-lebkuchen-daab8b.netlify.app/">app</a>
+              </p>
+              <p>
+                <a>Github : </a>
+                <a href="https://github.com/yskms/1205_utc_now_v3.git">URL</a>
+              </p>
+            </div>
+          </div>
+          <div class="works_main">
+              <img class="works_icon" src="../assets/hakase.png" alt="">
           </div>
         </div>
-
         <div class="git_cont" v-else-if="mv==false">
-          <p @click="moveLink('https://github.com/yskms')">https://github.com/yskms</p>
-          <!-- <a href="https://github.com/yskms">https://github.com/yskms</a> -->
+          <p>git</p>
+          <a href="https://github.com/yskms">https://github.com/yskms</a>
         </div>
-
       </div>
     </div>
   </div>
@@ -147,8 +185,6 @@ export default {
 /* アクセス時アニメーション ここまで--------------------------------------------*/
 .header h1{
   text-align: left;
-  padding-left: 0.1em;
-
 }
 .header nav{
   display: flex;
@@ -171,28 +207,36 @@ export default {
   opacity:0;
   color: #ffffff;
   height: 85%;
-  width: 100%;
 }
 .works_cont{
-  height: 80%;
+  height: 100%;
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr ; */
+}
+.works_main{
+  display: flex;
+  height: 20%;
   width: 90%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr ;
+  padding: 1em;
 }
+.works_main_left{
+  width: 30%;
+}
+.works_main_left img{
+  height: 100%;
+  width: 100%;
+}
+.works_main_right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1em;
+  width: 70%;
+}
+/* test */
 .works_icon{
-  width: 100%;
-  padding: 35%;
-}
-.works_icon img{
-  width: 100%;
-  transition: 0.5s;
-}
-.works_icon img:hover{
-  transform: scale(1.2);
-}
-
-.git_cont{
-  cursor: pointer;
+  height: 100%;
 }
 </style>
