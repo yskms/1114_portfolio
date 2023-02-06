@@ -200,7 +200,10 @@ export default {
   justify-content: space-evenly;
   text-decoration: underline;
   color: cadetblue;
-  cursor: pointer;
+  /* cursor: pointer; */
+}
+.content3 p{
+  cursor: pointer;  
 }
 /* ------------- */
 .close_area{
