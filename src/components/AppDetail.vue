@@ -7,34 +7,42 @@ export default {
       screenshotArr:[
         "img/hakase_ss.png",
         "img/rikare_ss.png",
-        "img/utc_ss.png",],
+        "img/utc_ss.png",
+        "img/othello_ss.png",],
       iconArr:[
         "img/hakase.png",
         "img/rikare.svg",
-        "img/utc.svg",],
+        "img/utc.svg",
+        "img/othello.svg",],
       titleArr:[
         "国旗ハカセ",
         "リカレめし",
-        "UTC NOW",],
+        "UTC NOW",
+        "VanillaJS-オセロ"],
       urlArr:[
         "https://remarkable-salmiakki-887cba.netlify.app/",
         "https://deft-toffee-382a3f.netlify.app/",
-        "https://chic-lebkuchen-daab8b.netlify.app/",],
+        "https://chic-lebkuchen-daab8b.netlify.app/",
+        "https://voluble-macaron-a9260e.netlify.app/",],
       qrArr:[
         "img/hakase_qr.png",
         "img/rikare_qr.png",
-        "img/utc_qr.png",],
+        "img/utc_qr.png",
+        "img/othello_qr.png",],
       commentArr:[
         "国旗クイズアプリです。職業訓練中の自主制作課題で最初に作成。Firebaseを利用してAuthやランキング登録などを実装しました。Figmaでプレゼン資料も作成しました。",
         "土佐堀周辺のオススメごはん屋さんを登録するアプリです。開発スピードを意識して機能を絞り込んで作成し、2週間でほぼ完成させました。",
         "UTCの時間を表示させるだけのシンプルアプリです。日付や時間の扱いに苦労しました。デザインも悩みましたが、最終的にはシンプルにまとめました。5日で作成。",
+        "VanillaJSで作成したアプリです。勉強初期に作成したので、配列で処理できるところを繰り返しで記述していたり、いたらぬ点も多いですが、デバッグやエラー処理が楽しかったです。",
       ],
       githubArr:[
         "https://github.com/yskms/1023_flag_app_v2",
         "https://github.com/yskms/1117_rikameshi.git",
-        "https://github.com/yskms/1205_utc_now_v3.git",],
+        "https://github.com/yskms/1205_utc_now_v3.git",
+        ”https://github.com/yskms/practice07-othello",],
       figmaArr:[
         "https://pitchdeck.hypermatic.com/slides/l9rx5yyj40410?token=VjR4biQlU2lIYmhIelo%3D",
+        "",
         "",
         "",],
     }

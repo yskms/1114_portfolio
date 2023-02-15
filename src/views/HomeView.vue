@@ -69,6 +69,9 @@ export default {
           <div class="works_icon">
               <img @click="openAppDetail(2)" src="../assets/utc.svg" alt="">
           </div>
+          <div class="works_icon">
+              <img @click="openAppDetail(3)" src="../assets/othello.svg" alt="">
+          </div>
         </div>
 
         <div class="git_cont" v-else-if="mv==false">
