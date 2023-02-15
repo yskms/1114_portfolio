@@ -39,7 +39,7 @@ export default {
         "https://github.com/yskms/1023_flag_app_v2",
         "https://github.com/yskms/1117_rikameshi.git",
         "https://github.com/yskms/1205_utc_now_v3.git",
-        ”https://github.com/yskms/practice07-othello",],
+        "https://github.com/yskms/practice07-othello",],
       figmaArr:[
         "https://pitchdeck.hypermatic.com/slides/l9rx5yyj40410?token=VjR4biQlU2lIYmhIelo%3D",
         "",
