@@ -1,0 +1,20 @@
+<svg width="706" height="705" viewBox="0 0 706 705" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="353" width="498.161" height="498.161" transform="rotate(45 353 0)" fill="#151515"/>
+<circle cx="356" cy="352" r="350" fill="url(#paint0_diamond_101_2)" fill-opacity="0.44"/>
+<line x1="58" y1="327" x2="706" y2="327" stroke="#FCFCFC" stroke-width="50"/>
+<line x1="181" y1="526.5" x2="531" y2="526.5" stroke="#FCFCFC"/>
+<line x1="236" y1="152" x2="531" y2="152" stroke="#FCFCFC" stroke-width="50"/>
+<line x1="370.675" y1="23.6834" x2="24.6748" y2="369.683" stroke="#FCFCFC" stroke-width="50"/>
+<line x1="376.678" y1="191.678" x2="111.678" y2="456.678" stroke="#FCFCFC" stroke-width="50"/>
+<line x1="531.354" y1="527.354" x2="356.354" y2="702.354" stroke="black"/>
+<line x1="531.353" y1="177.354" x2="181.353" y2="526.354" stroke="#FCFCFC"/>
+<line x1="531.354" y1="527.354" x2="356.354" y2="702.354" stroke="#FCFCFC"/>
+<line x1="532.354" y1="351.354" x2="269.354" y2="614.354" stroke="#FCFCFC"/>
+<line x1="198.678" y1="334.322" x2="461.678" y2="597.322" stroke="#FCFCFC" stroke-width="50"/>
+<defs>
+<radialGradient id="paint0_diamond_101_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(356 352) scale(350)">
+<stop stop-color="#0094E8"/>
+<stop offset="1" stop-color="#0094E8" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>
