@@ -6,47 +6,6 @@ export default {
 
   data(){
     return{
-      screenshotArr:[
-        "img/hakase_ss.png",
-        "img/rikare_ss.png",
-        "img/utc_ss.png",
-        "img/othello_ss.png",],
-      iconArr:[
-        "img/hakase.png",
-        "img/rikare.svg",
-        "img/utc.svg",
-        "img/othello.svg",],
-      titleArr:[
-        "国旗ハカセ",
-        "リカレめし",
-        "UTC NOW",
-        "VanillaJS-オセロ"],
-      urlArr:[
-        "https://remarkable-salmiakki-887cba.netlify.app/",
-        "https://deft-toffee-382a3f.netlify.app/",
-        "https://chic-lebkuchen-daab8b.netlify.app/",
-        "https://voluble-macaron-a9260e.netlify.app/",],
-      qrArr:[
-        "img/hakase_qr.png",
-        "img/rikare_qr.png",
-        "img/utc_qr.png",
-        "img/othello_qr.png",],
-      commentArr:[
-        "国旗クイズアプリです。職業訓練中の自主制作課題で最初に作成。Firebaseを利用してAuthやランキング登録などを実装しました。Figmaでプレゼン資料も作成しました。",
-        "土佐堀周辺のオススメごはん屋さんを登録するアプリです。開発スピードを意識して機能を絞り込んで作成し、2週間でほぼ完成させました。",
-        "UTCの時間を表示させるだけのシンプルアプリです。日付や時間の扱いに苦労しました。デザインも悩みましたが、最終的にはシンプルにまとめました。5日で作成。",
-        "VanillaJSで作成したアプリです。勉強初期に作成したので、配列で処理できるところを繰り返しで記述していたり、いたらぬ点も多いですが、デバッグやエラー処理が楽しかったです。",
-      ],
-      githubArr:[
-        "https://github.com/yskms/1023_flag_app_v2",
-        "https://github.com/yskms/1117_rikameshi.git",
-        "https://github.com/yskms/1205_utc_now_v3.git",
-        "https://github.com/yskms/practice07-othello",],
-      figmaArr:[
-        "https://pitchdeck.hypermatic.com/slides/l9rx5yyj40410?token=VjR4biQlU2lIYmhIelo%3D",
-        "",
-        "",
-        "",],
     }
   },
   methods:{
@@ -58,14 +17,12 @@ export default {
         top: 0,
         behavior: 'smooth'
       });
-      console.log('pagetop');
     },
   },
   watch:{
     detailNumber: {
         // immediate: true,
         handler: function () {
-          console.log("aaa");
           this.pageTop();
         }
     },
@@ -82,6 +39,8 @@ export default {
           <h1>国旗ハカセ</h1>
         </div>
         <a class="app_url" target="_blank" href="https://remarkable-salmiakki-887cba.netlify.app">https://remarkable-salmiakki-887cba.netlify.app</a>
+        <div class="ss_cont_wrap">
+
         <div class="ss_cont">
           <div class="ss">
             <img src="../assets/hakase_ss1.png">
@@ -99,6 +58,9 @@ export default {
             <img src="../assets/hakase_qr.png">
           </div>
         </div>
+
+        </div>
+
         <h2>Character<span class="small">アプリの特徴</span></h2>
         <li>国旗クイズアプリ</li>
         <li>ユーザー登録、スコアのランキング登録が可能</li>
@@ -143,22 +105,24 @@ export default {
           <h1>リカレめし</h1>
         </div>
         <a class="app_url" target="_blank" href="https://deft-toffee-382a3f.netlify.app/">https://deft-toffee-382a3f.netlify.app/</a>
-        <div class="ss_cont">
-          <div class="ss">
-            <img src="../assets/rikare_ss1.png">
-          </div>
-          <div class="ss">
-            <img src="../assets/rikare_ss2.png">
-          </div>
-          <div class="ss">
-            <img src="../assets/rikare_ss3.png">
-          </div>
-          <div class="ss">
-            <img src="../assets/rikare_ss4.png">
-          </div>
-          <div class="ss">
-            <img src="../assets/rikare_qr.png">
-          </div>
+        <div class="ss_cont_wrap">
+            <div class="ss_cont">
+              <div class="ss">
+                <img src="../assets/rikare_ss1.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/rikare_ss2.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/rikare_ss3.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/rikare_ss4.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/rikare_qr.png">
+              </div>
+            </div>
         </div>
         <h2>Character<span class="small">アプリの特徴</span></h2>
         <li>オススメごはん屋さんを投稿できるアプリ</li>
@@ -203,19 +167,21 @@ export default {
           <h1>UTC NOW</h1>
         </div>
         <a class="app_url" target="_blank" href="https://chic-lebkuchen-daab8b.netlify.app/">https://chic-lebkuchen-daab8b.netlify.app/</a>
-        <div class="ss_cont">
-          <div class="ss">
-            <img src="../assets/utc_ss1.png">
-          </div>
-          <div class="ss">
-            <img src="../assets/utc_ss2.png">
-          </div>
-          <div class="ss">
-            <img src="../assets/utc_ss3.png">
-          </div>
-          <div class="ss">
-            <img src="../assets/utc_qr.png">
-          </div>
+        <div class="ss_cont_wrap">
+            <div class="ss_cont">
+              <div class="ss">
+                <img src="../assets/utc_ss1.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/utc_ss2.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/utc_ss3.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/utc_qr.png">
+              </div>
+            </div>
         </div>
         <h2>Character<span class="small">アプリの特徴</span></h2>
         <li>UTC（協定世界時）を表示させるだけのシンプルアプリ</li>
@@ -254,19 +220,21 @@ export default {
           <h1>VanillaJS-オセロ</h1>
         </div>
         <a class="app_url" target="_blank" href="https://voluble-macaron-a9260e.netlify.app/">https://voluble-macaron-a9260e.netlify.app/</a>
-        <div class="ss_cont">
-          <div class="ss">
-            <img src="../assets/othello_ss1.png">
-          </div>
-          <div class="ss">
-            <img src="../assets/othello_ss2.png">
-          </div>
-          <div class="ss">
-            <img src="../assets/othello_ss3.png">
-          </div>
-          <div class="ss">
-            <img src="../assets/othello_qr.png">
-          </div>
+        <div class="ss_cont_wrap">
+            <div class="ss_cont">
+              <div class="ss">
+                <img src="../assets/othello_ss1.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/othello_ss2.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/othello_ss3.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/othello_qr.png">
+              </div>
+            </div>
         </div>
         <h2>Character<span class="small">アプリの特徴</span></h2>
         <li>オセロゲームのアプリ</li>
@@ -303,19 +271,21 @@ export default {
           <h1>portforio</h1>
         </div>
         <a class="app_url" href="https://merry-medovik-f234a3.netlify.app/">https://merry-medovik-f234a3.netlify.app/</a>
-        <div class="ss_cont">
-          <div class="ss">
-            <img src="../assets/portforio_ss1.png">
-          </div>
-          <div class="ss">
-            <img src="../assets/portforio_ss2.png">
-          </div>
-          <div class="ss">
-            <img src="../assets/portforio_ss3.png">
-          </div>
-          <div class="ss">
-            <img src="../assets/portforio_qr.png">
-          </div>
+        <div class="ss_cont_wrap">
+            <div class="ss_cont">
+              <div class="ss">
+                <img src="../assets/portforio_ss1.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/portforio_ss2.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/portforio_ss3.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/portforio_qr.png">
+              </div>
+            </div>
         </div>
         <h2>Character<span class="small">アプリの特徴</span></h2>
         <li>このポートフォリオ</li>
@@ -465,8 +435,12 @@ p{
   color: white;
 }
 .github_url{
-  color: white;
+  color: gray;
   text-decoration: none;
+  transition: 0.5s;
+}
+.github_url:hover{
+  color: white;
 }
 h1{
   padding-left: 1rem;
@@ -509,6 +483,22 @@ li{
 }
 
 /* スクリーンショット */
+.ss_cont_wrap{
+  height: 20rem;
+  width: 105%;
+  position: relative;;
+}
+.ss_cont_wrap::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10%;
+  content: "";
+  display: block;
+  height: 100%;
+  background: -webkit-linear-gradient(to left, rgb(0, 0, 0), transparent 90%);
+  background: linear-gradient(to left, rgb(0, 0, 0), transparent 90%);
+}
 .ss_cont{
   height: 20rem;
   display: flex;
@@ -517,14 +507,8 @@ li{
   padding-top: 2rem;
   padding-bottom: 1rem;
   overflow: auto;
-  width: 105%;
-}
-.ss_cont:after {
-  content: "";
-  display: block;
-  height: 100%;
-  background: -webkit-linear-gradient(to right, rgb(255, 255, 255), transparent);
-  background: linear-gradient(to right, rgb(255, 255, 255), transparent);
+  /* width: 105%; */
+  width: 100%;
 }
 .ss{
   height: 100%;

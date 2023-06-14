@@ -6,31 +6,27 @@ export default {
   components: { AppDetail },
   data(){
     return{
-      navList:1,
-      isAppDetail:false,
+      navList:1, //現在未使用
       detailNumber:0,
+        // 0:国旗ハカセ
+        // 1:リカレめし
+        // 2:UTC NOW
+        // 3:VanillaJS-オセロ
+        // 4:portforio
+        // 99:menu
     }
   },
-  mounted(){
-    console.log('home mounted')
-  },
   methods:{
+    openAppDetail(n){
+      this.detailNumber=n
+    },
+    // 現状、APPのみなので未使用
     navSwitch(e){
       if(e==1){
         this.navList=1
       }else if(e==2){
         this.navList=2
       }
-    },
-    openAppDetail(n){
-      this.detailNumber=n
-      this.isAppDetail=true
-    },
-    closeAppDetail(){
-      this.isAppDetail=false
-    },
-    moveLink(url) {
-      window.open(url, '_blank')
     },
   },
 }
@@ -66,7 +62,7 @@ export default {
               <!-- <p>SNS</p> -->
             </div>
             <div class="nav_list" >
-              <p  class="nav_list_ttl" @click="openAppDetail(0)" :class="{whiteText:(detailNumber==0)}"  >国旗ハカセ</p>
+              <p  class="nav_list_ttl" @click="openAppDetail(0)" :class="{whiteText:(detailNumber==0)}">国旗ハカセ</p>
               <p  class="nav_list_ttl" @click="openAppDetail(1)" :class="{whiteText:(detailNumber==1)}">リカレめし</p>
               <p  class="nav_list_ttl" @click="openAppDetail(2)" :class="{whiteText:(detailNumber==2)}">UTC NOW</p>
               <p  class="nav_list_ttl" @click="openAppDetail(3)" :class="{whiteText:(detailNumber==3)}">VanillaJS-オセロ</p>
@@ -85,6 +81,9 @@ export default {
 </template>
 
 <style scoped>
+/* ================================================== */
+/* デスクトップ用のCSS */
+/* ================================================== */
 p{
   color: gray;
 }
@@ -214,7 +213,9 @@ p{
         padding: 1%;
         margin: 0 auto;
       }
-
+/* ================================================== */
+/* スマホ、タブレット用のCSS */
+/* ================================================== */
 @media screen and (max-width: 830px) {
 p{
   color: gray;
