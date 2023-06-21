@@ -134,6 +134,7 @@ p{
           .appicon img{
             height: 100%;
             width: 100%;
+            object-fit: contain;
           }
           .myname_cont{
             height: 100%;
@@ -226,7 +227,7 @@ p{
   height: 100vh;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 200;
-  min-width: 450px;
+  min-width: 350px;
 
 }
 .cont{
@@ -268,6 +269,7 @@ p{
           .appicon img{
             height: 100%;
             width: 100%;
+            object-fit: contain;
           }
           .myname_cont{
             height: 100%;
