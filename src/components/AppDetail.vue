@@ -39,26 +39,25 @@ export default {
           <h1>国旗ハカセ</h1>
         </div>
         <a class="app_url" target="_blank" href="https://remarkable-salmiakki-887cba.netlify.app">https://remarkable-salmiakki-887cba.netlify.app</a>
+        
         <div class="ss_cont_wrap">
-
-        <div class="ss_cont">
-          <div class="ss">
-            <img src="../assets/hakase_ss1.png">
-          </div>
-          <div class="ss">
-            <img src="../assets/hakase_ss2.png">
-          </div>
-          <div class="ss">
-            <img src="../assets/hakase_ss3.png">
-          </div>
-          <div class="ss">
-            <img src="../assets/hakase_ss4.png">
-          </div>
-          <div class="ss">
-            <img src="../assets/hakase_qr.png">
-          </div>
-        </div>
-
+            <div class="ss_cont">
+              <div class="ss">
+                <img src="../assets/hakase_ss1.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/hakase_ss2.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/hakase_ss3.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/hakase_ss4.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/hakase_qr.png">
+              </div>
+            </div>
         </div>
 
         <h2>Character<span class="small">アプリの特徴</span></h2>
@@ -76,7 +75,12 @@ export default {
         <h2>Structure<span class="small">構成</span></h2>
         <li>Vue Routerでの画面遷移は5画面</li>
         <li>ユーザー認証画面とゲーム結果表示は、コンポーネントを全画面表示して実装</li>
-        <div class="kousei" id="hakase_kousei"><img src="../assets/hakase_kousei2.jpg"></div>
+
+        <div class="kousei_wrap" id="hakase_kousei">
+            <div class="kousei">
+              <img src="../assets/hakase_kousei2.jpg">
+            </div>
+        </div>
 
         <h2>Challenges<span class="small">挑戦したこと</span></h2>
         <li>利用者を小学校低学年と想定し、操作の分かりやすさ、動きのあるデザインを意識した</li>
@@ -139,7 +143,12 @@ export default {
         <li>1画面のみ</li>
         <li>店舗詳細画面と投稿・修正画面は、コンポーネントをポップアップ表示して実装</li>
         <li>店舗詳細 >> 修正 >> 店舗詳細と画面遷移しても反映されるように、ライフサイクルフックを活用</li>
-        <div class="kousei" id="rikare_kousei"><img src="../assets/rikare_kousei.jpg"></div>
+        
+        <div class="kousei_wrap" id="rikare_kousei">
+            <div class="kousei">
+              <img src="../assets/rikare_kousei.jpg">
+            </div>
+        </div>
 
         <h2>Challenges<span class="small">挑戦したこと</span></h2>
         <li>生徒が作ったアプリとして、継続して稼働させる事を目標にして制作</li>
@@ -193,7 +202,12 @@ export default {
 
         <h2>Structure<span class="small">構成</span></h2>
         <li>1画面のみ</li>
-        <div class="kousei"><img src="../assets/utc_kousei.jpg"></div>
+
+        <div class="kousei_wrap">
+            <div class="kousei">
+              <img src="../assets/utc_kousei.jpg">
+            </div>
+        </div>
 
         <h2>Challenges<span class="small">挑戦したこと</span></h2>
         <li>日付、時間の取り扱いに想像以上に苦労した</li>
@@ -297,7 +311,12 @@ export default {
         <h2>Structure<span class="small">構成</span></h2>
         <li>1画面</li>
         <li>アプリの詳細部分はコンポーネント化して表示</li>
-        <div class="kousei"><img src="../assets/portforio_kousei.jpg"></div>
+
+        <div class="kousei_wrap">
+            <div class="kousei">
+              <img src="../assets/portforio_kousei.jpg">
+            </div>
+        </div>
 
         <h2>Challenges<span class="small">挑戦したこと</span></h2>
         <li>ドキュメントを読んでもらえるようなデザインを目指した</li>
@@ -340,6 +359,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+/* ================================================== */
+/* ------全体的なデザイン------- */
 .appDetail_cont{
   background-color: rgb(0, 0, 0);
   color: aliceblue;
@@ -377,7 +398,8 @@ export default {
       100% {opacity: 1;transform: translateX(0);}
     }
 
-/* ------メニュー表示用------- */
+/* ================================================== */
+/* ------スマホサイズ時のmenu表示用------- */
         .sidebar{
           width: 100%;
           height: 100%;
@@ -422,7 +444,9 @@ export default {
                   border-bottom: 1px gray solid;
                   cursor: pointer;
                 }
-/* ------フォント------- */
+
+/* ================================================== */
+/* ------フォントや部分的なデザイン------- */
 p{
   color: gray;
 }
@@ -431,6 +455,13 @@ p{
   text-decoration: none;
   transition: 0.5s;
 }
+/* -- スマホサイズ用 -- */
+      @media screen and (max-width: 830px) {
+        .app_url{
+          font-size: 0.8rem;
+        }
+      }
+
 .app_url:hover{
   color: white;
 }
@@ -466,72 +497,123 @@ h2:after {
 }
 li{
   font-weight: 200;
-  /* list-style: none; */
   padding-left: 2em;
 }
-/* アプリのタイトル部分 */
+/* -- スマホサイズ用 -- */
+      @media screen and (max-width: 830px) {
+        li{
+          font-size: 0.8rem;
+        }
+      }
+
+/* ----- アプリのタイトル部分 ----- */
 .title_cont{
   height: 3rem;
   display: flex;
   margin-top: 1rem;
 }
-.title_icon{
-  height: 100%;
-}
-.title_icon img{
-  height: 90%;
-}
+    .title_icon{
+      height: 100%;
+    }
+        .title_icon img{
+          height: 90%;
+        }
 
-/* スクリーンショット */
+/* ----- スクリーンショット ----- */
 .ss_cont_wrap{
   height: 20rem;
   width: 105%;
-  position: relative;;
+  position: relative;
 }
-.ss_cont_wrap::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 10%;
-  content: "";
-  display: block;
-  height: 100%;
-  background: -webkit-linear-gradient(to left, rgb(0, 0, 0), transparent 90%);
-  background: linear-gradient(to left, rgb(0, 0, 0), transparent 90%);
-}
-.ss_cont{
-  height: 20rem;
-  display: flex;
-  gap: 1em;
-  padding-left: 2rem;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-  overflow: auto;
-  /* width: 105%; */
-  width: 100%;
-}
-.ss{
-  height: 100%;
-}
-.ss img{
-  height: 100%;
-}
+    /* 右側のシャドーアウト */
+    .ss_cont_wrap::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 10%;
+      content: "";
+      display: block;
+      height: 100%;
+      background: -webkit-linear-gradient(to left, rgb(0, 0, 0), transparent 90%);
+      background: linear-gradient(to left, rgb(0, 0, 0), transparent 90%);
+    }
+    /* 左側のシャドーアウト */
+    .ss_cont_wrap::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5%;
+      content: "";
+      display: block;
+      height: 100%;
+      background: -webkit-linear-gradient(to right, rgb(0, 0, 0), transparent 90%);
+      background: linear-gradient(to right, rgb(0, 0, 0), transparent 90%);
+    }
+    .ss_cont{
+      height: 20rem;
+      display: flex;
+      gap: 1em;
+      padding-left: 2rem;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+      overflow: auto;
+      /* width: 105%; */
+      width: 100%;
+    }
+        .ss{
+          height: 100%;
+        }
+            .ss img{
+              height: 100%;
+            }
 
-/* 構成の画像 */
-.kousei{
-  padding-top: 1rem;
-  padding-left: 2rem;
+/* ----- 構成の画像 ----- */
+.kousei_wrap{
   height: 10rem;
-  overflow: auto;
   width: 105%;
+  position: relative;
 }
-.kousei img{
-  height: 96%;
-}
+/* 個別に高さを設定 */
 #hakase_kousei{
   height: 20rem;
 }
+/* 個別に高さを設定 */
 #rikare_kousei{
   height: 15rem;
 }
+    /* 右側のシャドーアウト */
+    .kousei_wrap::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 10%;
+      content: "";
+      display: block;
+      height: 100%;
+      background: -webkit-linear-gradient(to left, rgb(0, 0, 0), transparent 90%);
+      background: linear-gradient(to left, rgb(0, 0, 0), transparent 90%);
+    }
+    /* 左側のシャドーアウト */
+    .kousei_wrap::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5%;
+      content: "";
+      display: block;
+      height: 100%;
+      background: -webkit-linear-gradient(to right, rgb(0, 0, 0), transparent 90%);
+      background: linear-gradient(to right, rgb(0, 0, 0), transparent 90%);
+    }
+    .kousei{
+      padding-top: 1rem;
+      padding-left: 2rem;
+      height: 100%;
+      overflow: auto;
+      width: 100%;
+    }
+        .kousei img{
+          height: 96%;
+        }
+
 </style>
