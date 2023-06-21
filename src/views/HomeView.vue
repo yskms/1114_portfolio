@@ -245,7 +245,7 @@ p{
       .header{
         height: 100%;
         margin: 0 auto;
-        padding: 0.5em 0;
+        padding: 0.5em 1em;
         background-color: rgb(255, 255, 255);
         border-radius: 1.5em;
         display: flex;
