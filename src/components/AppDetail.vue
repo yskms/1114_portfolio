@@ -74,7 +74,7 @@ export default {
 
         <h2>Structure<span class="small">構成</span></h2>
         <li>Vue Routerでの画面遷移は5画面</li>
-        <li>ユーザー認証画面とゲーム結果表示は、コンポーネントを全画面表示して実装</li>
+        <li>ユーザー認証画面と得点表示は、コンポーネントを全画面表示して実装</li>
 
         <div class="kousei_wrap" id="hakase_kousei">
             <div class="kousei">
@@ -89,8 +89,8 @@ export default {
 
         <h2>Impressions<span class="small">感想</span></h2>
         <li>分かりやすいUIを作成する難しさを感じた</li>
-        <li>制作中は読みやすいコードと思っていたが、説明に詳細さが足りない部分がある</li>
-        <li>ルール設定に誤りがあったのか、firebase関連のエラーが発生している</li>
+        <li>制作中は読みやすいコードを書けたと思っていたが、説明に詳細さが足りない部分がある</li>
+        <li>ルール設定に誤りがあったのか、firebase関連のエラーが現在発生している</li>
 
         <h2>Future<span class="small">今後の課題</span></h2>
         <li>デザインの修正と統一（Vuetifyの除去）</li>
@@ -142,7 +142,7 @@ export default {
         <h2>Structure<span class="small">構成</span></h2>
         <li>1画面のみ</li>
         <li>店舗詳細画面と投稿・修正画面は、コンポーネントをポップアップ表示して実装</li>
-        <li>店舗詳細 >> 修正 >> 店舗詳細と画面遷移しても反映されるように、ライフサイクルフックを活用</li>
+        <li>店舗詳細 >> 修正 >> 店舗詳細と画面遷移しても修正内容が反映されるように、ライフサイクルフックを活用</li>
         
         <div class="kousei_wrap" id="rikare_kousei">
             <div class="kousei">
@@ -222,6 +222,7 @@ export default {
         <h2>Future<span class="small">今後の課題</span></h2>
         <li>オブジェクト指向などまだまだ理解不足な部分があるので、適宜参考書の読み返しなどで理解を深めていきたい</li>
         <li>デザインについては当初気付けなかった部分が見えるようになってきているので、もっと経験を積んでいきたい</li>
+        <li>現在ReactNativeで書き換えて、スマホアプリ化に取り組んでいる</li>
 
         <h2>GitHub<span class="small">ソースコード</span></h2>
         <li><a class="github_url" target="_blank" href="https://github.com/yskms/1205_utc_now_v3">https://github.com/yskms/1205_utc_now_v3</a></li>
