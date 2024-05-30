@@ -57,6 +57,9 @@ export default {
               <div class="ss">
                 <img src="../assets/hakase_qr.png">
               </div>
+              <div class="ss" style="opacity: 0;">
+                <img src="../assets/whiteSpace.png">
+              </div>
             </div>
         </div>
 
@@ -126,6 +129,9 @@ export default {
               <div class="ss">
                 <img src="../assets/rikare_qr.png">
               </div>
+              <div class="ss" style="opacity: 0;">
+                <img src="../assets/whiteSpace.png">
+              </div>
             </div>
         </div>
         <h2>Character<span class="small">アプリの特徴</span></h2>
@@ -190,6 +196,9 @@ export default {
               <div class="ss">
                 <img src="../assets/utc_qr.png">
               </div>
+              <div class="ss" style="opacity: 0;">
+                <img src="../assets/whiteSpace.png">
+              </div>
             </div>
         </div>
         <h2>Character<span class="small">アプリの特徴</span></h2>
@@ -249,6 +258,9 @@ export default {
               <div class="ss">
                 <img src="../assets/othello_qr.png">
               </div>
+              <div class="ss" style="opacity: 0;">
+                <img src="../assets/whiteSpace.png">
+              </div>
             </div>
         </div>
         <h2>Character<span class="small">アプリの特徴</span></h2>
@@ -300,6 +312,9 @@ export default {
               <div class="ss">
                 <img src="../assets/portforio_qr.png">
               </div>
+              <div class="ss" style="opacity: 0;">
+                <img src="../assets/whiteSpace.png">
+              </div>
             </div>
         </div>
         <h2>Character<span class="small">アプリの特徴</span></h2>
@@ -334,6 +349,74 @@ export default {
         <li><a class="github_url" target="_blank" href="https://github.com/yskms/1114_portfolio">https://github.com/yskms/1114_portfolio</a></li>
     </div>
     <!-- 4 -->
+    <!-- 5 -->
+    <div class="appDetail_main" v-show="detailNumber==5">
+        <div class="title_cont">
+          <div class="title_icon"><img src="../assets/utcApp.png"></div>
+          <h1>UTC NOW (Android & iOS)</h1>
+        </div>
+        <p><a class="app_url" target="_blank" href="https://play.google.com/store/apps/developer?id=yskms.studio">https://play.google.com/store/apps/developer?id=yskms.studio</a></p>
+        <p><a class="app_url" target="_blank" href="https://apps.apple.com/us/app/utc-now/id6503170187">https://apps.apple.com/us/app/utc-now/id6503170187</a></p>
+        <div class="ss_cont_wrap">
+            <div class="ss_cont">
+              <div class="ss">
+                <img src="../assets/utcApp_ss1.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/utcApp_ss2.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/utcApp_ss3.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/utcApp_ss4.png">
+              </div>
+              <div class="ss">
+                <img src="../assets/utcApp_ss5.png">
+              </div>
+              <div class="ss" style="opacity: 0;">
+                <img src="../assets/whiteSpace.png">
+              </div>
+            </div>
+        </div>
+        <h2>Character<span class="small">アプリの特徴</span></h2>
+        <li>UTC（協定世界時）を表示させるだけのシンプルアプリ</li>
+        
+        <h2>Technology<span class="small">使用技術</span></h2>
+        <li>ReactNative</li>
+        <li>Expo</li>
+        <li>TypeScript</li>
+
+        <h2>Structure<span class="small">構成</span></h2>
+        <li>2画面</li>
+
+        <div class="kousei_wrap">
+            <div class="kousei">
+              <img src="../assets/utcApp_kousei.png">
+            </div>
+        </div>
+
+        <h2>Challenges<span class="small">挑戦したこと</span></h2>
+        <li>働きながら独学でReactNativeとExpo、TypeScriptに取り組んだ</li>
+        <li>スマホアプリとしてアプリストアにリリースした</li>
+        <li>AndroidとiOSの両方に対応した</li>
+
+        <h2>Impressions<span class="small">感想</span></h2>
+        <li>覚える項目が多くて混乱してしまい、完成までに時間が掛かり過ぎた</li>
+        <li>ReactNativeとTypeScriptは別々に取り組むべきだった</li>
+        <li>ビルドやキーストアなど、アプリ化するだけでも工数が多かった</li>
+        <li>OS毎に挙動や使える機能が異なり、両OSへ同時に対応する難しさを感じた</li>
+        <li>日本語の情報が非常に少なかった</li>
+
+        <h2>Future<span class="small">今後の課題</span></h2>
+        <li>ReactNativeをもっと自由に扱えるように学習を進めたい</li>
+        <li>語学力を高めて、鮮度の高い英語の情報に、抵抗感少なく対応したい</li>
+        
+
+        <h2>GitHub<span class="small">ソースコード</span></h2>
+        <li>非公開</li>
+    </div>
+    <!-- 5 -->
     <!-- 99 スマホサイズ時の、menu押下時に表示する -->
     <div class="appDetail_main" v-show="detailNumber==99">
         <div class="sidebar_cont">

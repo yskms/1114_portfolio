@@ -13,6 +13,7 @@ export default {
         // 2:UTC NOW
         // 3:VanillaJS-オセロ
         // 4:portforio
+        // 5:UTC NOW (Android & iOS)
         // 99:menu
     }
   },
@@ -45,6 +46,7 @@ export default {
           <div class="appicon" @click="openAppDetail(2)" :class="{appicon_selected:(detailNumber==2)}" ><img src="../assets/utc.svg"></div>
           <div class="appicon" @click="openAppDetail(3)" :class="{appicon_selected:(detailNumber==3)}" ><img src="../assets/othello.svg"></div>
           <div class="appicon" @click="openAppDetail(4)" :class="{appicon_selected:(detailNumber==4)}" ><img src="../assets/favicon.svg"></div>
+          <div class="appicon" @click="openAppDetail(5)" :class="{appicon_selected:(detailNumber==5)}" ><img src="../assets/utcApp.png"></div>
           <div class="myname_cont">
             <div class="myname">masashi yasaka</div>
           </div>
@@ -67,6 +69,7 @@ export default {
               <p  class="nav_list_ttl" @click="openAppDetail(2)" :class="{whiteText:(detailNumber==2)}">UTC NOW</p>
               <p  class="nav_list_ttl" @click="openAppDetail(3)" :class="{whiteText:(detailNumber==3)}">VanillaJS-オセロ</p>
               <p  class="nav_list_ttl" @click="openAppDetail(4)" :class="{whiteText:(detailNumber==4)}">portforio</p>
+              <p  class="nav_list_ttl" @click="openAppDetail(5)" :class="{whiteText:(detailNumber==5)}"><span class="nav_list_ttl_new">new! </span>UTC NOW (Android & iOS)</p>
             </div>
           </div>
         </div>
@@ -206,6 +209,9 @@ p{
                   color: white;
                   border-bottom: 1px gray solid;
                   cursor: pointer;
+                }
+                .nav_list_ttl_new{
+                  color: violet;
                 }
       .article{
         width: 75%;
