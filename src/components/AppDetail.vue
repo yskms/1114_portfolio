@@ -560,7 +560,15 @@ p{
 h1{
   padding-left: 1rem;
   font-weight: 700;
+  white-space: nowrap;
+  transition: 0.5s;
 }
+/* -- スマホサイズ用 -- */
+      @media screen and (max-width: 830px) {
+        h1{
+          font-size: 1.5rem;
+        }
+      }
 h2{
   padding: 0.5rem;
   font-weight: 400;
